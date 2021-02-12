@@ -15,9 +15,9 @@
 
 class Value(object):
 
-    def __init__(self, today: float, today_description: str,
-                 tomorrow: float, tomorrow_description: str,
-                 day_after_tomorrow: float, day_after_tomorrow_description: str,
+    def __init__(self, today: int, today_description: str,
+                 tomorrow: int, tomorrow_description: str,
+                 day_after_tomorrow: int, day_after_tomorrow_description: str,
                  pollen: str, region: str):
         self.today = today
         self.today_description = today_description
