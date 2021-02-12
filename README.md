@@ -13,9 +13,9 @@ Imports pollen levels from DWD.
 * region (string)
 
 ## Configs
-* lat (float): latitude selected
-* long (float); longitude selected
-* pollen (List[str]): list of strings describing which pollen should to be imported
+* lat (float): latitude selected. Default: 51.34
+* long (float); longitude selected. Default: 12.38
+* FilterPollen (List[str]): list of strings describing which pollen should to be imported. Default: []
 
 ---
 
