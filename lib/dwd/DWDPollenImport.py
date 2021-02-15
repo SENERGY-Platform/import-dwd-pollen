@@ -62,7 +62,7 @@ class DWDPollenImport:
         dt, values = self.__fetcher.get_data(self.__area, self.__filter_pollen)
         if dt < datetime.fromtimestamp(time.time(), tz=timezone.utc):
             logger.info("Next update scheduled, but not yet available. Retrying in 5 minutes.")
-            self.__scheduler.enter(300, 0, self.import_current())
+            self.__scheduler.enter(300, 0, self.import_current)
             return
         for value_dt, value in values:
             self.__lib.put(value_dt.astimezone(timezone.utc), value.dict())
