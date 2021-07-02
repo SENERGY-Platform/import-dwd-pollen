@@ -48,7 +48,13 @@ class DWDPollenAreaMetadataManager:
 
     @staticmethod
     def __point_in_area(area: DWDPollenArea, lat: float, long: float) -> bool:
-        for poly in area.polygon:
+        polis = area.polygon
+        if len(polis) > 0 and len(polis[0]) > 0 and len(polis[0][0]) > 2:
+            polis = []
+            for polylist in area.polygon:
+                for poly in polylist:
+                    polis.append(poly)
+        for poly in polis:
             inside = False
             x = long
             y = lat
